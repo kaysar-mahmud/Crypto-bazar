@@ -1,340 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="images/favicon.ico" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        colors: {
-                            laravel: "#ef3b2d",
-                        },
-                    },
-                },
-            };
-        </script>
-        <title>LaraGigs | Find Laravel Jobs & Projects</title>
-    </head>
-    <body class="mb-48">
-        <nav class="flex justify-between items-center mb-4">
-            <a href="index.html"
-                ><img class="w-24" src="images/logo.png" alt="" class="logo"
-            /></a>
-            <ul class="flex space-x-6 mr-6 text-lg">
-                <li>
-                    <a href="register.html" class="hover:text-laravel"
-                        ><i class="fa-solid fa-user-plus"></i> Register</a
-                    >
-                </li>
-                <li>
-                    <a href="login.html" class="hover:text-laravel"
-                        ><i class="fa-solid fa-arrow-right-to-bracket"></i>
-                        Login</a
-                    >
-                </li>
-            </ul>
-        </nav>
 
-        <!-- Hero -->
-        <section
-            class="relative h-72 bg-laravel flex flex-col justify-center align-center text-center space-y-4 mb-4"
-        >
-            <div
-                class="absolute top-0 left-0 w-full h-full opacity-10 bg-no-repeat bg-center"
-                style="background-image: url('images/laravel-logo.png')"
-            ></div>
+  <head>
 
-            <div class="z-10">
-                <h1 class="text-6xl font-bold uppercase text-white">
-                    Lara<span class="text-black">Gigs</span>
-                </h1>
-                <p class="text-2xl text-gray-200 font-bold my-4">
-                    Find or post Laravel jobs & projects
-                </p>
-                <div>
-                    <a
-                        href="register.html"
-                        class="inline-block border-2 border-white text-white py-2 px-4 rounded-xl uppercase mt-2 hover:text-black hover:border-black"
-                        >Sign Up to List a Gig</a
-                    >
-                </div>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>CryptoBazar | </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <div class="navbar-brand">
+                      <a href="index.html">
+                        <img src="/anotherView/assets/images/cryptoBazar3.png" alt="Logo">
+                      </a>
+                    </div>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Search End ***** -->
+                    <div class="search-input">
+                      <form id="search" action="#">
+                        <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
+                        <i class="fa fa-search"></i>
+                      </form>
+                    </div>
+                    <!-- ***** Search End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="browse.html">Browse</a></li>
+                        <li><a href="details.html">Details</a></li>
+                        <li><a href="profile.html">Profile <img src="assets/images/profile-header.jpg" alt=""></a></li>
+                    </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
             </div>
-        </section>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
 
-        <main>
-            <!-- Search -->
-            <form action="">
-                <div class="relative border-2 border-gray-100 m-4 rounded-lg">
-                    <div class="absolute top-4 left-3">
-                        <i
-                            class="fa fa-search text-gray-400 z-20 hover:text-gray-500"
-                        ></i>
-                    </div>
-                    <input
-                        type="text"
-                        name="search"
-                        class="h-14 w-full pl-10 pr-20 rounded-lg z-0 focus:shadow focus:outline-none"
-                        placeholder="Search Laravel Gigs..."
-                    />
-                    <div class="absolute top-2 right-2">
-                        <button
-                            type="submit"
-                            class="h-10 w-20 text-white rounded-lg bg-red-500 hover:bg-red-600"
-                        >
-                            Search
-                        </button>
-                    </div>
-                </div>
-            </form>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-content">
 
-            <div
-                class="lg:grid lg:grid-cols-2 gap-4 space-y-4 md:space-y-0 mx-4"
-            >
-                <!-- Item 1 -->
-                <div class="bg-gray-50 border border-gray-200 rounded p-6">
-                    <div class="flex">
-                        <img
-                            class="hidden w-48 mr-6 md:block"
-                            src="images/acme.png"
-                            alt=""
-                        />
-                        <div>
-                            <h3 class="text-2xl">
-                                <a href="show.html">Senior Laravel Developer</a>
-                            </h3>
-                            <div class="text-xl font-bold mb-4">Acme Corp</div>
-                            <ul class="flex">
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                                >
-                                    <a href="#">Laravel</a>
-                                </li>
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                                >
-                                    <a href="#">API</a>
-                                </li>
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                                >
-                                    <a href="#">Backend</a>
-                                </li>
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                                >
-                                    <a href="#">Vue</a>
-                                </li>
-                            </ul>
-                            <div class="text-lg mt-4">
-                                <i class="fa-solid fa-location-dot"></i> Boston,
-                                MA
-                            </div>
-                        </div>
-                    </div>
+          <!-- ***** Banner Start ***** -->
+          <div class="main-banner">
+            <div class="row">
+              <div class="col-lg-7">
+                <div class="header-text">
+                  <h6>Welcome To CryptoBazar</h6>
+                  <h4><em>Browse</em> Our Popular Web3 products Here</h4>
+                  <div class="main-button">
+                    <a href="browse.html">Browse Now</a>
+                  </div>
                 </div>
-                <!-- Item 2 -->
-                <div class="bg-gray-50 border border-gray-200 rounded p-6">
-                    <div class="flex">
-                        <img
-                            class="hidden w-48 mr-6 md:block"
-                            src="images/stark.png"
-                            alt=""
-                        />
-                        <div>
-                            <h3 class="text-2xl">
-                                <a href="show.html">Full-Stack Engineer</a>
-                            </h3>
-                            <div class="text-xl font-bold mb-4">
-                                Stark Industries
-                            </div>
-                            <ul class="flex">
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                                >
-                                    <a href="#">Laravel</a>
-                                </li>
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                                >
-                                    <a href="#">API</a>
-                                </li>
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                                >
-                                    <a href="#">Backend</a>
-                                </li>
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                                >
-                                    <a href="#">Vue</a>
-                                </li>
-                            </ul>
-                            <div class="text-lg mt-4">
-                                <i class="fa-solid fa-location-dot"></i>
-                                Lawrence, MA
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="bg-gray-50 border border-gray-200 rounded p-6">
-                    <div class="flex">
-                        <img
-                            class="hidden w-48 mr-6 md:block"
-                            src="images/wayne.png"
-                            alt=""
-                        />
-                        <div>
-                            <h3 class="text-2xl">
-                                <a href="show.html">Laravel Developer</a>
-                            </h3>
-                            <div class="text-xl font-bold mb-4">
-                                Wayne Enterprises
-                            </div>
-                            <ul class="flex">
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                                >
-                                    <a href="#">Laravel</a>
-                                </li>
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                                >
-                                    <a href="#">API</a>
-                                </li>
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                                >
-                                    <a href="#">Backend</a>
-                                </li>
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                                >
-                                    <a href="#">Vue</a>
-                                </li>
-                            </ul>
-                            <div class="text-lg mt-4">
-                                <i class="fa-solid fa-location-dot"></i> Newark,
-                                NJ
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="bg-gray-50 border border-gray-200 rounded p-6">
-                    <div class="flex">
-                        <img
-                            class="hidden w-48 mr-6 md:block"
-                            src="images/skynet.png"
-                            alt=""
-                        />
-                        <div>
-                            <h3 class="text-2xl">
-                                <a href="show.html">Backend Laravel Dev</a>
-                            </h3>
-                            <div class="text-xl font-bold mb-4">
-                                Skynet Systems
-                            </div>
-                            <ul class="flex">
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                                >
-                                    Laravel
-                                </li>
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                                >
-                                    API
-                                </li>
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                                >
-                                    Backend
-                                </li>
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                                >
-                                    Vue
-                                </li>
-                            </ul>
-                            <div class="text-lg mt-4">
-                                <i class="fa-solid fa-location-dot"></i>
-                                Daytona, FL
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 5 -->
-                <div class="bg-gray-50 border border-gray-200 rounded p-6">
-                    <div class="flex">
-                        <img
-                            class="hidden w-48 mr-6 md:block"
-                            src="images/wonka.png"
-                            alt=""
-                        />
-                        <div>
-                            <h3 class="text-2xl">
-                                <a href="show.html">Junior Developer</a>
-                            </h3>
-                            <div class="text-xl font-bold mb-4">
-                                Wonka Industries
-                            </div>
-                            <ul class="flex">
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                                >
-                                    <a href="#">Laravel</a>
-                                </li>
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                                >
-                                    <a href="#">API</a>
-                                </li>
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                                >
-                                    <a href="#">Backend</a>
-                                </li>
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                                >
-                                    <a href="#">Vue</a>
-                                </li>
-                            </ul>
-                            <div class="text-lg mt-4">
-                                <i class="fa-solid fa-location-dot"></i> San
-                                Francisco, CA
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-        </main>
+          </div>
+          <!-- ***** Banner End ***** -->
 
-        <footer
-            class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-laravel text-white h-24 mt-24 opacity-90 md:justify-center"
-        >
-            <p class="ml-2">Copyright &copy; 2022, All Rights reserved</p>
+          <!-- ***** Most Popular Start ***** -->
+          <div class="most-popular">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="heading-section">
+                  <h4><em>Most Popular</em> Right Now</h4>
+                </div>
+                <div class="row">
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="item">
+                      
+                      <img src="/anotherView/assets/images/pngwing.com (1).png" alt="">
+                     
+                      <h4>BitCoin<br><span>Cryptocurrency</span></h4>
+                      <ul>
+                        <li><i class="fa fa-star"></i> 4.8</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="item">
+                      <img src="/anotherView/assets/images/kindpng_2795468.png" alt="">
+                      <h4>Dogecoin<br><span>Cryptocurrency</span></h4>
+                      <ul>
+                        <li><i class="fa fa-star"></i> 4.8</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="item">
+                      <img src="/anotherView/assets/images/—Pngtree—crypto money coin design_7253944.png" alt="">
+                      <h4>Ethemrium<br><span>Cryptocurrency</span></h4>
+                      <ul>
+                        <li><i class="fa fa-star"></i> 4.8</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="item">
+                      <img src="/anotherView/assets/images/tether-usdt-cryptocurrency-golden-coin-isolated-transparent-background-vector-illustration_5555-1028.webp" alt="">
+                      <h4>Tether<br><span>Cryptocurrency</span></h4>
+                      <ul>
+                        <li><i class="fa fa-star"></i> 4.8</li>
+                      </ul>
+                    </div>
+                  </div>
 
-            <a
-                href="create.html"
-                class="absolute top-1/3 right-10 bg-black text-white py-2 px-5"
-                >Post Job</a
-            >
-        </footer>
-    </body>
+                  <div class="col-lg-12">
+                    <div class="main-button">
+                      <a href="browse.html">Discover Popular</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ***** Most Popular End ***** -->
+
+          
+  </div>
+  
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2022 <a href="#">CryptoBazar</a>. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+
+  </body>
+
 </html>
